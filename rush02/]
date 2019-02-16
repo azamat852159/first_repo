@@ -1,0 +1,47 @@
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
+
+void ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int ind;
+	
+	ind = 0;
+	while (str[ind] != '\0')
+	{
+		ft_putchar(str[ind]);
+		ind++;
+	}
+}
+
+int main(int col, char **args)
+{
+	int b;
+	char buf[4097];
+
+	b = read(0, buf, 4096);
+	buf[b] = '\0';
+	ft_putchar(h(buf) + '0');
+//	ft_putstr(buf);
+
+	return (0);
+}
+
+int h(char *buf)
+{
+	int x;
+	int i;
+
+	i = 0;
+	while (buf[i] != '\0')
+		if (buf[i] == '\n')
+			i++;
+	return (i);
+}
+
+
