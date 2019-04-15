@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 int	ft_iterative_factorial(int nb);
 
 int	ft_iterative_factorial(int nb)
@@ -29,9 +31,15 @@ int	ft_iterative_factorial(int nb)
 		c = 1;
 		while (nb > 0)
 		{
-			c = c * nb;
-			nb = nb - 1;
+			c = c * nb; nb = nb - 1;
 		}
 	}
 	return (c);
+}
+
+int main(void)
+{
+	int b = 3;
+	printf("%d\n",ft_iterative_factorial(b));
+	return(0);
 }
