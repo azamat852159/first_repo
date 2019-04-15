@@ -39,5 +39,6 @@ int	ft_iterative_factorial(int nb)
 
 int main(void)
 {
-	
+	int new_var = 3;
+	return (0);
 }
