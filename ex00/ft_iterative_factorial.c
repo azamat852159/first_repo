@@ -39,7 +39,8 @@ int	ft_iterative_factorial(int nb)
 
 int main(void)
 {
-	int c = b;
+	int c;
+	scanf("Enter the number%d", &c);
 	printf("%d\n",ft_iterative_factorial(c));
 	return(0);
 }
