@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+<h3> List of People</h3>
+
+<table class="centered">
+    <thead>
+    <tr>
+        <th>e-mail</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="user:${users}">
+        <td th:text="${user.mail}"/>
+        <td th:text="${user.password}"/>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
