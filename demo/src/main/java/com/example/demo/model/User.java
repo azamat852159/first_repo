@@ -18,4 +18,8 @@ public class User {
 
     private String mail;
     private String password;
+
+    public static User createUser(){
+        return new User();
+    }
 }

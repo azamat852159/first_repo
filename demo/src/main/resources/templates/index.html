@@ -7,8 +7,6 @@
 </head>
 <body>
 
-<h3> List of People</h3>
-
 <table class="centered">
     <thead>
     <tr>
@@ -16,7 +14,13 @@
         <th>Password</th>
     </tr>
     </thead>
-
+    <h3> Go  </h3>
+    <form action="#" th:action="@{/}" th:object="${newuser}" method="post">
+        <p>Mail: <input type="text" th:field="*{mail}" /></p>
+        <p>Password: <input type="text" th:field="*{password}" /></p>
+        <p><input type="submit" value="Create new User" /></p>
+    </form>
+    <h3> List of People</h3>
     <tbody>
     <tr th:each="user:${users}">
         <td th:text="${user.mail}"/>
