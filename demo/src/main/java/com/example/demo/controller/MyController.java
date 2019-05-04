@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import static com.example.demo.model.User.createUser;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping(value = "/")
 public class MyController {
 
 
@@ -35,10 +35,10 @@ public class MyController {
 
     @PostMapping
     public String getNewUser(User user){
-        if (Check.createCheck().methodCheck(user) == 0)
+        if (Check.createCheck().methodCheck(user) == 0) {
             userRepo.save(user);
-        return "redirect:/";
-
+        }
+            return "redirect:/";
     }
 }
 
